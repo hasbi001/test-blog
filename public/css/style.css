@@ -1,0 +1,8 @@
+.text-right { text-align: right; }
+.form { margin-bottom: 3%; }
+.isi-jobs {
+	padding: 1%;
+	border-radius: 10px;
+	border: 1px solid grey;
+	margin-bottom: 1%;
+}
