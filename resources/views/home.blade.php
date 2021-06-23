@@ -39,13 +39,25 @@
                         <div id="list-jobs"></div>
                         <input type="hidden" id="page" value="1">
                     </div>
-                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="btn btn-primary" onclick="loadmore()">Load More ...</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
+    
+    $(document).ready(function() {
+        var page = $("#page").val();
+        var jobdes = $("#jobdes").val();
+        var location = $("#location").val();
+        var fulltime = "";
+        loadJobs(page,jobdes,location,fulltime);
+    });
     function  Search() {
         $('.isi-jobs').remove();
         var page = $("#page").val();
@@ -97,12 +109,5 @@
           }
         });
     }
-    $(document).ready(function() {
-        var page = $("#page").val();
-        var jobdes = $("#jobdes").val();
-        var location = $("#location").val();
-        var fulltime = "";
-        loadJobs(page,jobdes,location,fulltime);
-    });
 </script>
 @endsection
